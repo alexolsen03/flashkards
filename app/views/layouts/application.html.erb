@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Designer</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+	<header>
+		<h1 id="logo">Flashkard</h1>
+		<form>
+			<input type="search" class="search" placeholder="Search"/>
+			<button class="search-submit" type="submit">Search</button>
+		</form>
+		<ul id="barMenu">
+			<li><i class="fa fa-plus-circle"></i></li>
+			<li><i class="fa fa-gear"></i></li>
+			<li><i class="fa fa-inbox"></i></li>
+		</ul>
+	</header>
+	<div id="leftPanel" class="lock-panel">
+		<div id="staticMenuContent">
+			<h1>Mode</h1>
+			<div class="btn-menu">
+				<div class="menu-item-selected-wrapper">
+					<div id="menuItemSelected" class="menu-item">
+						Standard
+					</div>
+				</div>
+				<ul>
+					<li class="item1">Match</li>
+					<li class="item2">Memory</li>
+					<li class="item3">Standard</li>
+				</ul>
+			</div>
+			<h1># of options</h1>
+			<div class="btn-menu">
+				<div class="menu-item-selected-wrapper">
+					<div id="numOptionsItemSelected" class="menu-item">
+						<i class="fa-square-o fa fa-2x"></i>
+						<span class="card-amt">3</span>
+					</div>
+				</div>
+				<ul id="cardNumList">
+					<li class="item1">
+						<div class="menu-item">
+							<i class="fa-square-o fa fa-2x"></i>
+							<span class="card-amt">3</span>
+						</div>
+					</li>
+					<li class="item2">
+						<div class="menu-item">
+							<i class="fa-square-o fa fa-2x"></i>
+							<span class="card-amt">4</span>
+						</div>
+					</li>
+					<li class="item3">
+						<div class="menu-item">
+							<i class="fa-square-o fa fa-2x"></i>
+							<span class="card-amt">5</span>
+						</div>
+					</li>
+<!-- 					<li class="item4">
+						<div class="menu-item">
+							<i class="fa-square-o fa fa-2x"></i>
+							<span class="card-amt">5</span>
+						</div>
+					</li>
+					<li class="item5">
+						<div class="menu-item">
+							<i class="fa-square-o fa fa-2x"></i>
+							<span class="card-amt">7</span>
+						</div>
+					</li> -->
+				</ul>
+			</div>
+		</div>
+
+		<div id="unlockIcon" class="locked">
+			<div class="circle-border">
+				<div class="circle">
+						<i id="leftArrow" class="fa fa-arrow-right"></i>
+						<i id="leftUnlock" class="fa fa-unlock"></i>
+						<i id="leftLock" class="fa fa-lock"></i>
+				</div>
+			</div>
+		</div>
+
+	</div>
+	<div id='content'>
+		<%= yield %>
+	</div>
+
+</body>
+</html>
