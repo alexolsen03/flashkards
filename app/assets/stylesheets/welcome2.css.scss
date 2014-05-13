@@ -1,0 +1,134 @@
+$dark: #333;
+$light: #fff;
+$bright: #ff9900;
+$gray: #cecece;
+$topSize: 32px;
+$compl: #0D58A6;
+
+header{
+	border-bottom: 3px solid $bright;
+	background-color: $dark;
+
+	.wrapper{
+		width: 960px;
+		margin: 0px auto;
+	}
+
+	h1#logo{
+		display: inline-block;
+		padding: 8px 20px;
+
+		font-family: Calibri;
+		letter-spacing: 1.5px;
+		background-color: $bright;
+		color: $light;
+		text-transform: uppercase;
+
+		span{
+			display: inline-block;
+			margin-left: 10px;
+
+			letter-spacing: 0px;
+			font-weight: bold;
+			color: $compl;
+		}
+	}
+
+	ul#studyModeList{
+		display: inline-block;
+		margin: 0px 150px;
+
+		li.mode-option{
+			position: relative;
+			display: inline-block;
+			padding: 8px 24px;
+			z-index: 99;
+
+			color: $gray;
+
+			-webkit-transition: all 0.2s;
+
+			div#numSelWrapper{
+				i{
+					margin: 0px 1px;
+				}
+			}
+
+			h2{
+				text-transform: lowercase;
+				font-family: Calibri;
+			}
+
+			div.submenu-container{
+				position: absolute;
+				top: $topSize;
+				max-height: 0px;
+				overflow: hidden;
+
+				border-radius: 3px;
+				background-color: $light;
+				color: $dark;
+
+				ul.submenu{
+					display: inline-block;
+					max-width: 999px;
+
+					text-align: center;
+					color: $gray;
+
+					li.submenu-option{
+						display: inline-block;
+						padding: 8px 24px;
+
+						line-height: $topSize;
+						text-align: center;
+
+						&:hover{
+							color: $bright;
+						}
+					}
+				}
+			}
+
+			div#numOptionsSubmenu{
+				width: 344px;
+				left: -122px;
+			}
+
+			div#modeSubmenu{
+				width: 321px;
+				left: -110px;
+			}
+
+			&:hover{
+				cursor: pointer;
+				background-color: $light;
+				color: $bright;
+
+				div.submenu-container{
+					max-height: 999px;
+
+					-webkit-transition: max-height 0.8s ease-in;
+				}
+			}
+		}
+	}
+
+	ul#navControlList{
+		float: right;
+		line-height: $topSize;
+		padding: 0px 10px;
+
+		background-color: $gray;
+		color: $dark;
+
+		li{
+			display: inline-block;
+			margin: 0px 10px;
+		}
+
+		&:after{
+			clear: both;
+		}
+	}
+}

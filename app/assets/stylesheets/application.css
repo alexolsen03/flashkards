@@ -67,7 +67,6 @@ table {
 	border-spacing: 0;
 }
 
-div#content{
-	width: 940px;
-	margin: 0px auto;
+.shadow{
+	box-shadow: 3px 2px 5px #666;
 }

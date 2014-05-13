@@ -7,7 +7,80 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-	<header>
+<header>
+	<div class='wrapper'>
+		<h1 id='logo'>Flashkards<span>BETA</span></h1>
+		<ul id='studyModeList'>
+			<li class='mode-option'>
+				<h2>Standard</h2>
+				<div id='modeSubmenu' class='submenu-container'>
+					<ul class='submenu'>
+						<li class='submenu-option'>
+							<h2>Standard</h2>
+						</li>
+						<li class='submenu-option'>
+							<h2>Memory</h2>
+						</li>
+						<li class='submenu-option'>
+							<h2>Matching</h2>
+						</li>
+					</ul>
+				</div>
+			</li>
+			<li class='mode-option'>
+				<div id="numSelWrapper">
+					<i class='fa fa-square-o'></i>
+					<i class='fa fa-square-o'></i>
+					<i class='fa fa-square-o'></i>
+				</div>
+				<div id='numOptionsSubmenu' class='submenu-container'>
+					<ul id='numOfCardsList' class='submenu'>
+						<li class='submenu-option' val='3'>
+							<i class="fa fa-square-o"></i>
+							<i class="fa fa-square-o"></i>
+							<i class="fa fa-square-o"></i>
+						</li>
+						<li class='submenu-option' val='4'>
+							<i class="fa fa-square-o"></i>
+							<i class="fa fa-square-o"></i>
+							<i class="fa fa-square-o"></i>
+							<i class="fa fa-square-o"></i>
+						</li>
+						<li class='submenu-option' val='5'>
+							<i class="fa fa-square-o"></i>
+							<i class="fa fa-square-o"></i>
+							<i class="fa fa-square-o"></i>
+							<i class="fa fa-square-o"></i>
+							<i class="fa fa-square-o"></i>
+						</li>
+					</ul>
+				</div>
+			</li>
+			<li class='mode-option'>
+				<i class='fa fa-clock-o'></i>
+				<div id='timeSubmenu' class='submenu-container'>
+					<ul class='submenu'>
+						<li class='submenu-option'>
+							<i></i>
+						</li>
+						<li class='submenu-option'>
+							<i></i>
+						</li>
+						<li class='submenu-option'>
+							<i></i>
+						</li>
+					</ul>
+				</div>
+			</li>
+		</ul>
+		<ul id='navControlList'>
+			<li><i class="fa fa-plus-circle"></i></li>
+			<li><i class="fa fa-gear"></i></li>
+			<li><i class="fa fa-inbox"></i></li>
+		</ul>
+	</div>
+</header>
+<!-- 	<header>
 		<h1 id="logo">Flashkard</h1>
 		<form>
 			<input type="search" class="search" placeholder="Search"/>
@@ -61,7 +134,7 @@
 							<span class="card-amt">5</span>
 						</div>
 					</li>
-<!-- 					<li class="item4">
+ 					<li class="item4">
 						<div class="menu-item">
 							<i class="fa-square-o fa fa-2x"></i>
 							<span class="card-amt">5</span>
@@ -72,7 +145,7 @@
 							<i class="fa-square-o fa fa-2x"></i>
 							<span class="card-amt">7</span>
 						</div>
-					</li> -->
+					</li>
 				</ul>
 			</div>
 		</div>
@@ -88,6 +161,7 @@
 		</div>
 
 	</div>
+	-->
 	<div id='content'>
 		<%= yield %>
 	</div>
