@@ -54,6 +54,14 @@ header{
 				}
 			}
 
+			div#matchingSelWrapper{
+				display: none;
+			}
+
+			div#matchingOptionsSubmenu{
+				display: none;
+			}
+
 			h2{
 				text-transform: lowercase;
 				font-family: Calibri;
@@ -90,6 +98,11 @@ header{
 				}
 			}
 
+			div#matchingOptionsSubmenu{
+				width: 221px;
+				left: -75px;
+			}
+
 			div#numOptionsSubmenu{
 				width: 344px;
 				left: -122px;
@@ -119,8 +132,7 @@ header{
 		line-height: $topSize;
 		padding: 0px 10px;
 
-		background-color: $gray;
-		color: $dark;
+		color: $gray;
 
 		li{
 			display: inline-block;
