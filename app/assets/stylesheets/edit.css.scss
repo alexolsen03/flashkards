@@ -1,0 +1,94 @@
+$dark: #333;
+$light: #fff;
+$bright: #ff9900;
+$gray: #cecece;
+$topSize: 32px;
+$compl: #0D58A6;
+
+div#editWrapper{
+	color: $dark;
+	font-family: Calibri;
+
+	h1#stackName{
+		display: inline-block;
+		margin: 20px 0px;
+
+		font-size: 26pt;
+		text-transform: uppercase;
+	}
+
+	textarea.word-input{
+		display: inline-block;
+		box-sizing: border-box;
+		width: 380px;
+		height: 120px;
+		padding: 6px 10px;
+
+		border-radius: 8px;
+		font-size: 14pt;
+
+		&:first-of-type{
+			margin-left: 10px;
+		}
+
+		&:last-of-type{
+			margin-left: 20px;
+		}
+	}
+
+	div#addContainer{
+		vertical-align: top;
+		display: inline-block;
+		height: 100px;
+		line-height: 145px;
+		padding: 0px 40px;
+
+		i#addCardBtn{
+			cursor: pointer;
+
+			&:hover{
+				color: $bright;
+			}
+		}
+	}
+
+	ul#stackCardList{
+		margin: 40px 0px;
+
+		li.created-cards{
+			position: relative;
+			float: left;
+
+			color: $gray;
+			cursor: pointer;
+
+			h2{
+				position: relative;
+				box-sizing: border-box;
+				width: 180px;
+				height: 60px;
+				padding: 6px 10px;
+				margin: 10px;
+
+				background-color: $light;
+				border-radius: 8px;
+			}
+
+			i{
+				position: absolute;
+				right: 10px;
+				top: 6px;
+
+			}
+
+			&:hover{
+				color: $dark;
+				background-color: $bright;
+
+				h2{
+					
+				}
+			}
+		}
+	}
+}

@@ -70,3 +70,12 @@ table {
 .shadow{
 	box-shadow: 3px 2px 5px #666;
 }
+
+.wrapper{
+	width: 960px;
+	margin: 0px auto;
+}
+
+.clearme{
+	clear: both;
+}

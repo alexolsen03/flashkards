@@ -95,4 +95,33 @@ $(document).ready(function(){
 		}
 	});
 
+	$("#addCardBtn").click(function(){
+		addCard();
+	});
+
+	$('textarea').keypress(function (e) {
+	  if (e.which == 13) {
+	    addCard();
+	  }
+	});
+
 });
+
+function addCard(){
+	var frontText = $("#frontText").val();
+	var backText = $("#backText").val();
+
+	$("#frontText").val("");
+	$("#backText").val("");
+
+	var str = "<li class='created-cards'>" +
+					"<h2 class='shadow'>" +
+						frontText +
+						"<i class='fa fa-edit'></i>" +
+					"</h2>" +
+				"</li>" +
+				"<div class='clearme'></div>";
+	$("#stackCardList").children().last().remove();
+	$("#stackCardList").append(str);
+	$("#frontText").focus();
+}
