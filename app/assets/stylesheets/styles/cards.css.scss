@@ -71,6 +71,7 @@ textarea.card-input{
 
 .disabled-secondary-card{
 	@extend .secondary-card;
+	
 	color: $color-gray;
 
 	&:hover{
@@ -88,7 +89,7 @@ textarea.card-input{
 @include keyframes(anim_match_cards){
 	  0%{ margin: 5px 0px; }
 	 60%{ margin: 10px 14px; }
-	 80%{ margin: 10px 16px; }
+	 80%{ margin: 10px 15px; }
 	100%{ margin: 10px 14px; }
 }
 
@@ -98,8 +99,7 @@ textarea.card-input{
 
 .card-in{
 	@include animation('anim_card_append 0.5s');
-	// -webkit-animation-name: anim_card_append;
-	// -webkit-animation-duration: 0.5s;
+
 	-webkit-animation-fill-mode: forwards;
 	   -moz-animation-fill-mode: forwards;
 	        animation-fill-mode: forwards;
@@ -111,25 +111,4 @@ textarea.card-input{
 // 	 60%{ padding: 10px 6px; }
 // 	 80%{ padding: 9px 6px; }
 // 	100%{ padding: 9px 6px; }
-// }
-
-
-// div.card{
-// 	position: absolute;
-// 	top: 140px;
-// 	left: 50%;
-// 	margin-left: -250px;
-// 	width: 500px;
-
-// 	background-color: #fcfcfc;
-// 	text-align: center;
-// 	border-radius: 8px;
-// 	box-shadow: 3px 2px 5px #666;
-
-// 	h1{
-// 		padding: 80px 10px;
-// 		color: $outsidePanel;
-// 		font-family: Calibri;
-// 		font-size: 26pt;
-// 	}
 // }

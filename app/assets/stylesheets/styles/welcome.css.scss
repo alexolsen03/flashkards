@@ -20,8 +20,10 @@ div#standardMode{
 				cursor: pointer;
 			}
 
-			h3{
-				padding: 40px 10px;
+			h4{
+				padding: 10px;
+
+				color: $color-main;
 			}
 		}
 	}
@@ -34,8 +36,9 @@ div#matchMode{
 	text-align: center;
 
 	div.match-option{
+		@include animation('anim_match_cards 0.5s');
 
-		@include animation('anim_match_cards 0.25s');
+		color: $color-main;
 
 		-webkit-animation-fill-mode: forwards;
 		   -moz-animation-fill-mode: forwards;
