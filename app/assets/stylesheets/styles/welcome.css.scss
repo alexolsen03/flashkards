@@ -1,0 +1,48 @@
+// Place all the styles related to the welcome controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+div#standardMode{
+	display: block;
+	padding-top: 40px;
+
+	text-align: center;
+
+	ul#answerOptions{
+		margin-top: 80px;
+
+		text-align: center;
+
+		li{
+			display: inline-block;
+
+			&:hover{
+				cursor: pointer;
+			}
+
+			h3{
+				padding: 40px 10px;
+			}
+		}
+	}
+}
+
+div#matchMode{
+	display: none;
+	padding-top: 40px;
+
+	text-align: center;
+
+	div.match-option{
+
+		@include animation('anim_match_cards 0.25s');
+
+		-webkit-animation-fill-mode: forwards;
+		   -moz-animation-fill-mode: forwards;
+		        animation-fill-mode: forwards;
+
+		&:hover{
+			cursor: pointer;
+		}
+	}
+}

@@ -1,0 +1,80 @@
+.wrapper{
+	@include center-wrapper(960px);
+}
+
+.shadow{
+	@include shadow(3px, 2px, 5px, #666);
+}
+
+.card-rounded{
+	@include rounded(8px);
+}
+
+.go-right{
+	float: right;
+}
+
+.go-left{
+	float: left;
+}
+
+.clearme{
+	clear: both;
+}
+
+.align-l{
+	text-align: left;
+}
+
+.align-c{
+	text-align: center;
+}
+
+.align-r{
+	text-align: right;
+}
+
+.title-font{
+	font-family: $title-font;
+}
+
+h1{
+	@extend .title-font;
+	font-size: 24pt;
+}
+
+h2{
+	@extend .title-font;
+	font-size: 18pt;
+}
+
+h3{
+	@extend .title-font;
+	font-size: 14pt;
+}
+
+h4{
+	@extend .title-font;
+	font-size: 12pt;
+}
+
+h5{
+	@extend .title-font;
+	font-size: 10pt;
+}
+
+
+/******* Responsive Portion *********/
+
+.container{
+	padding: 0px 15px;
+
+	.row{
+		margin: 0px -15px;
+
+		.col{
+			display: inline-block;
+			padding: 0px 15px;
+		}
+	}
+}

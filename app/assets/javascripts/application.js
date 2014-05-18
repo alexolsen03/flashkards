@@ -17,33 +17,12 @@
 
 $(document).ready(function(){
 
-	// $("#unlockIcon").click(function(){
-	// 	if($(this).hasClass('locked')){
-	// 		$(this).removeClass('locked');
-	// 		$(this).addClass('unlocked');
-	// 		$("#leftPanel").removeClass('lock-panel');
-	// 	}else{
-	// 		$(this).removeClass('unlocked');
-	// 		$(this).addClass('locked');
-	// 		$("#leftPanel").addClass('lock-panel');
-	// 	}
-	// });
-
-	// $("#cardNumList li").click(function(){
-	// 	var amt = $(this).find(".card-amt").text();
-	// 	$("#numOptionsItemSelected").find(".card-amt").text(amt);
-	// 	var answers = $("#answerOptions");
-	// 	$("#answerOptions").empty();
-	// 	for(var i = 0; i < amt; i++){
-	// 		$("#answerOptions").append("<li class='card-in'><h1>TESTER</h1></li>");
-	// 	}
-	// });
-
 	$("#modeSubmenu li").click(function(){
-		var val = $(this).find("h2").text();
+		var val = $(this).find("h4").text();
 		if(val == "Matching"){
 			$("#matchMode").css("display", "block");
 			$("#matchingSelWrapper").css("display", "block");
+			$("#matchingSelList").css("display", "inline-block");
 			$("#matchingOptionsSubmenu").css("display", "block");
 
 			$("#standardMode").css("display", "none");
@@ -57,6 +36,7 @@ $(document).ready(function(){
 
 			$("#matchMode").css("display", "none");
 			$("#matchingSelWrapper").css("display", "none");
+			$("#matchingSelList").css("display", "none");
 			$("#matchingOptionsSubmenu").css("display", "none");
 		}
 		$("#currentMode").text(val);
@@ -69,7 +49,7 @@ $(document).ready(function(){
 		$('#answerOptions').empty();
 		var str = "";
 		for(var i=0; i<amt; i++){
-			$("#answerOptions").append("<li class='card-in'><h1>TESTER</h1></li>");
+			$("#answerOptions").append("<li class='secondary-card card-in'><h4>TESTER</h4></li>");
 			str += "<i class='fa fa-square-o'></i>";
 		}
 		$(numSel).append(str);
@@ -77,6 +57,7 @@ $(document).ready(function(){
 
 	$("#matchingOptionsList li").click(function(){
 		var amt = $(this).attr('val');
+		var txt = $(this).find('h4').text();
 		var match = $("#matchMode");
 		$(match).empty();
 		for(var i=0; i<amt; i++){
@@ -84,7 +65,7 @@ $(document).ready(function(){
 
 			for(var n=0; n<amt; n++){
 				str+=(	"<div class='col"+(n+1)+" col'>" +
-					"	<div class='match-option'>Man</div>" +
+					"	<div class='secondary-card match-option'>Man</div>" +
 					"</div>");
 			}
 
@@ -93,6 +74,8 @@ $(document).ready(function(){
 			$(match).append(str);
 
 		}
+		$("#currentMatchNum").text(txt);
+
 	});
 
 	$("#addCardBtn").click(function(){
@@ -111,17 +94,18 @@ function addCard(){
 	var frontText = $("#frontText").val();
 	var backText = $("#backText").val();
 
-	$("#frontText").val("");
-	$("#backText").val("");
+	$("#frontText").val('');
+	$("#backText").val('');
 
-	var str = "<li class='created-cards'>" +
-					"<h2 class='shadow'>" +
-						frontText +
+	var str = "<li>" +
+					"<div class='disabled-secondary-card'>" +
+						"<h4>" + frontText + "</h4>" +
 						"<i class='fa fa-edit'></i>" +
-					"</h2>" +
+					"</div>" +
 				"</li>" +
 				"<div class='clearme'></div>";
 	$("#stackCardList").children().last().remove();
 	$("#stackCardList").append(str);
+	
 	$("#frontText").focus();
 }

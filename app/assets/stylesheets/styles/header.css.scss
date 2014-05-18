@@ -1,0 +1,129 @@
+header{
+	border-bottom: 3px solid $color-accent;
+	background-color: $color-main;
+
+	h3#logo{
+		display: inline-block;
+		padding: 8px 20px;
+
+		letter-spacing: 1.5px;
+		background-color: $color-accent;
+		color: $color-light;
+		text-transform: uppercase;
+
+		span{
+			display: inline-block;
+			margin-left: 10px;
+
+			letter-spacing: 0px;
+			font-weight: bold;
+			color: $color-compl;
+		}
+	}
+
+	ul{
+		display: inline-block;
+
+		text-align: center;
+
+		li{
+			display: inline-block;
+			position: relative;
+			z-index: 99;
+			
+			color: $color-gray;
+			text-transform: lowercase;
+
+			@include transition-away(all);
+
+			div.submenu-container{
+				position: absolute;
+				top: 32px;
+				max-height: 0px;
+				overflow: hidden;
+
+				@include rounded(3px);
+				background-color: $color-light;
+				color: $color-main;
+
+				ul.submenu{
+					max-width: 999px;
+
+					li.submenu-option{
+						padding: 8px 24px;
+
+						line-height: 32px;
+
+						&:hover{
+							color: $color-accent;
+						}
+					}
+				}
+			}
+
+			&:hover{
+				cursor: pointer;
+				background-color: $color-light;
+				color: $color-accent;
+
+				div.submenu-container{
+					max-height: 999px;
+
+					@include transition-in(max-height, ease-in);
+				}
+			}
+
+			&.mode-option{
+				padding: 8px 24px;
+			}
+		}
+	}
+
+	ul#studyModeList{
+		margin-left: 150px;
+
+		div#modeSubmenu{
+			width: 321px;
+			left: -110px;
+		}
+
+	}
+
+	ul#numSelList{
+
+		div#numSelWrapper{
+			i{
+				margin: 0px 1px;
+			}
+		}
+
+		div#numOptionsSubmenu{
+			width: 344px;
+			left: -122px;
+		}
+
+	}
+
+	ul#matchingSelList{
+		display: none;
+
+		div#matchingOptionsSubmenu{
+			display: none;
+			width: 221px;
+			left: -75px;
+		}
+	}
+
+	ul#navControlList{
+		float: right;
+		padding-top: 3px; //bc floated.. need to align with other uls
+
+		li{
+			padding: 8px 10px;
+		}
+
+		&:after{
+			clear: both;
+		}
+	}
+}

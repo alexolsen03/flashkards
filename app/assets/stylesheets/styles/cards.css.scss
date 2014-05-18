@@ -1,0 +1,135 @@
+.card{
+	@extend .card-rounded;
+	@extend .shadow;
+	@include box-sizing;
+
+	position: relative;
+	display: inline-block;
+	padding: 8px 10px;
+
+	background-color: $color-light;
+	text-align: center;
+	font-family: $card-font;
+
+	.card-text{
+
+	}
+}
+
+.main-card{
+	@extend .card;
+
+	width: 500px;
+	min-height: 200px;
+}
+
+.secondary-card{
+	@extend .card;
+
+	width: 180px;
+	min-height: 72px;
+
+	&:hover{
+		background-color: $color-accent;
+	}
+}
+
+.card-front{
+
+}
+
+.card-back{
+
+}
+
+.main-front-card{
+	@extend .main-card;
+	@extend .card-front;
+}
+
+.main-back-card{
+	@extend .main-card;
+	@extend .card-back;
+}
+
+.secondary-front-card{
+	@extend .secondary-card;
+	@extend .card-front;
+}
+
+.secondary-back-card{
+	@extend .secondary-card;
+	@extend .card-back;
+}
+
+textarea.card-input{
+	@extend .card;
+
+	width: 380px;
+	height: 120px;
+}
+
+.disabled-secondary-card{
+	@extend .secondary-card;
+	color: $color-gray;
+
+	&:hover{
+		color: $color-main;
+	}
+}
+
+@include keyframes(anim_card_append){
+	  0%{ margin:  0px; }
+	 60%{ margin: 40px; }
+	 80%{ margin: 42px; }
+	100%{ margin: 40px; }
+}
+
+@include keyframes(anim_match_cards){
+	  0%{ margin: 5px 0px; }
+	 60%{ margin: 10px 14px; }
+	 80%{ margin: 10px 16px; }
+	100%{ margin: 10px 14px; }
+}
+
+.card-out{
+	margin: 40px;
+}
+
+.card-in{
+	@include animation('anim_card_append 0.5s');
+	// -webkit-animation-name: anim_card_append;
+	// -webkit-animation-duration: 0.5s;
+	-webkit-animation-fill-mode: forwards;
+	   -moz-animation-fill-mode: forwards;
+	        animation-fill-mode: forwards;
+}
+
+
+// @include keyframes(anim_menu){
+// 	  0%{ padding: 4px 3px; }
+// 	 60%{ padding: 10px 6px; }
+// 	 80%{ padding: 9px 6px; }
+// 	100%{ padding: 9px 6px; }
+// }
+
+
+// div.card{
+// 	position: absolute;
+// 	top: 140px;
+// 	left: 50%;
+// 	margin-left: -250px;
+// 	width: 500px;
+
+// 	background-color: #fcfcfc;
+// 	text-align: center;
+// 	border-radius: 8px;
+// 	box-shadow: 3px 2px 5px #666;
+
+// 	h1{
+// 		padding: 80px 10px;
+// 		color: $outsidePanel;
+// 		font-family: Calibri;
+// 		font-size: 26pt;
+// 	}
+// }
