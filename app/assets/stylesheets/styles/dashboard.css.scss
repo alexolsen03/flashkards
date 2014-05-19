@@ -1,0 +1,101 @@
+section{
+	@extend .box-sizing;
+	@extend .shadow;
+
+	display: inline-block;
+	margin-top: 20px;
+
+	background-color: $color-light;
+	vertical-align: top;
+
+	h4.section-title{
+		padding: 10px 20px;
+
+		background-color: $color-gray;
+		color: $color-main;
+		font-weight: bold;
+		text-transform: uppercase;
+		text-align: center;
+	}
+
+	li{
+		padding: 10px;
+
+		color: $color-main;
+		cursor: pointer;
+		text-transform: lowercase;
+	}
+}
+
+section#stackInfo{
+	ul{
+
+		li{
+			@extend .shadow;
+			@extend .box-sizing;
+
+			width: 300px;
+
+			background-color: lighten($color-gray, 10%);
+
+			@include transition(padding-top, 0.3s);
+
+			&:hover{
+				padding-top: 30px;
+
+				color: $color-accent;
+
+				@include transition(padding-top, 0.1s);
+			}
+		}
+	}
+
+	ul#stackList{
+		
+		li{
+			@extend .shadow;
+			@extend .box-sizing;
+
+			width: 300px;
+			padding: 10px;
+
+			@include transition(padding-bottom, 0.3s);
+
+			&:hover{
+				padding-bottom: 30px;
+
+				color: $color-accent;
+
+				@include transition(padding-bottom, 0.1s);
+			}
+
+			&.add-stack{
+				color: $color-compl;
+				text-transform: lowercase;
+				text-align: center;
+			}
+		}
+	}
+}
+
+section#trendingInfo{
+	margin-left: -4px;
+	width: 640px;
+
+	ul{
+		display: block;
+
+		li{
+			display: block;
+
+			border-bottom: 1px solid $color-gray;
+			color: darken($color-gray, 20%);
+
+			&:hover{
+				background-color: $color-gray;
+				color: $color-main;
+				cursor: pointer;
+			}
+		}
+	}
+}
