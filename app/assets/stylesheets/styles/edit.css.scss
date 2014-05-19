@@ -21,18 +21,38 @@ div#editWrapper{
 		}
 	}
 
-	div#addContainer{
+	div#addSaveContainer{
 		vertical-align: top;
 		display: inline-block;
 		height: 100px;
 		line-height: 145px;
 		padding: 0px 40px;
 
-		i#addCardBtn{
+		i{
 			cursor: pointer;
 
 			&:hover{
 				color: $color-accent;
+			}
+		}
+
+		&.add-mode{
+			i.add-icon{
+				display: inline-block;
+			}
+
+			i.save-icon{
+				display: none;
+			}
+		}
+
+		&.save-mode{
+			i.add-icon{
+				display: none;
+			}
+
+			i.save-icon{
+				display: inline-block;
 			}
 		}
 	}
@@ -42,7 +62,7 @@ div#editWrapper{
 
 		li{
 			float: left;
-			margin: 0px 10px;
+			margin: 10px;
 
 			div.disabled-secondary-card{
 				position: relative;
@@ -54,6 +74,11 @@ div#editWrapper{
 					right: 10px;
 					top: 6px;
 
+				}
+
+				&.activeCard{
+					background-color: $color-accent;
+					color: $color-main;
 				}
 			}
 		}

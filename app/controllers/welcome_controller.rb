@@ -4,4 +4,5 @@ class WelcomeController < ApplicationController
 
   def edit
   end
+
 end

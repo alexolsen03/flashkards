@@ -78,15 +78,38 @@ $(document).ready(function(){
 
 	});
 
-	$("#addCardBtn").click(function(){
-		addCard();
+	$("#addSaveContainer i").click(function(){
+		if($("#addSaveContainer").hasClass("add-mode")){
+			addCard();
+		}else{
+			saveCard();
+		}
 	});
 
 	$('textarea').keypress(function (e) {
 	  if (e.which == 13) {
-	    addCard();
+	    if($("#addSaveContainer").hasClass("add-mode")){
+			addCard();
+		}else{
+			saveCard();
+		}
 	  }
 	});
+
+	addEditCardListener();
+	// $(".disabled-secondary-card").click(function(){
+	// 	var fText = $(this).attr('fronttext');
+	// 	var bText = $(this).attr('backtext');
+
+	// 	$(this).addClass('activeCard');
+
+	// 	console.log('text is: ' + fText + ' ' + bText);
+
+	// 	$("#frontText").val(fText);
+	// 	$("#backText").val(bText);
+
+	// 	$("#addSaveContainer").removeClass("add-mode").addClass("save-mode");
+	// });
 
 });
 
@@ -98,7 +121,7 @@ function addCard(){
 	$("#backText").val('');
 
 	var str = "<li>" +
-					"<div class='disabled-secondary-card'>" +
+					"<div class='disabled-secondary-card' fronttext='" + frontText +"' backtext='" + backText +"'>" +
 						"<h4>" + frontText + "</h4>" +
 						"<i class='fa fa-edit'></i>" +
 					"</div>" +
@@ -106,6 +129,44 @@ function addCard(){
 				"<div class='clearme'></div>";
 	$("#stackCardList").children().last().remove();
 	$("#stackCardList").append(str);
+
+	addEditCardListener();
 	
 	$("#frontText").focus();
+}
+
+function saveCard(){
+	var frontText = $("#frontText").val();
+	var backText = $("#backText").val();
+
+	$('.activeCard').attr('fronttext', frontText);
+	$('.activeCard').attr('backtext', backText);
+
+	$('.activeCard').find('h4').text(frontText);
+
+	$('.activeCard').removeClass('activeCard');
+
+	$("#addSaveContainer").removeClass("save-mode").addClass("add-mode");
+
+	$("#frontText").val('');
+	$("#backText").val('');
+
+	$("#frontText").focus();
+}
+
+function addEditCardListener(){
+	$(".disabled-secondary-card").click(function(){
+		var fText = $(this).attr('fronttext');
+		var bText = $(this).attr('backtext');
+
+		$('.activeCard').removeClass('activeCard');
+		$(this).addClass('activeCard');
+
+		console.log('text is: ' + fText + ' ' + bText);
+
+		$("#frontText").val(fText);
+		$("#backText").val(bText);
+
+		$("#addSaveContainer").removeClass("add-mode").addClass("save-mode");
+	});
 }

@@ -3,11 +3,14 @@
 	<div id='newCardForm'>
 		<textarea id='frontText' type='text' class='card-input' placeholder="Front Text..."></textarea>
 		<textarea id='backText' type='text' class='card-input' placeholder="Back Text..."></textarea>
-		<div id='addContainer'><i id='addCardBtn' class='fa fa-plus-circle fa-3x'></i></div>
+		<div id='addSaveContainer' class='add-mode'>
+			<i class='add-icon fa fa-plus-circle fa-3x'></i>
+			<i class='save-icon fa fa-save fa-3x'></i>
+		</div>
 	</div>
 	<ul id='stackCardList'>
 		<li>
-			<div class='disabled-secondary-card'>
+			<div class='disabled-secondary-card' fronttext='Card One' backtext='Card One Back'>
 				<h4>Card One</h4>
 				<i class='fa fa-edit'></i>
 			</div>
