@@ -46,6 +46,10 @@ section#stackInfo{
 				color: $color-accent;
 
 				@include transition(padding-top, 0.1s);
+
+				h5{
+					display: inline-block;
+				}
 			}
 		}
 	}
@@ -61,12 +65,25 @@ section#stackInfo{
 
 			@include transition(padding-bottom, 0.3s);
 
+			h4{
+				display: inline-block;
+			}
+
+			h5.show-hover{
+				display: none;
+				margin-left: 80px;
+			}
+
 			&:hover{
 				padding-bottom: 30px;
 
 				color: $color-accent;
 
 				@include transition(padding-bottom, 0.1s);
+
+				h5{
+					display: inline-block;
+				}
 			}
 
 			&.add-stack{
@@ -79,8 +96,8 @@ section#stackInfo{
 }
 
 section#trendingInfo{
-	margin-left: -4px;
-	width: 640px;
+	margin-left: 20px;
+	width: 616px;
 
 	ul{
 		display: block;
@@ -88,7 +105,7 @@ section#trendingInfo{
 		li{
 			display: block;
 
-			border-bottom: 1px solid $color-gray;
+			//border-bottom: 1px solid $color-gray;
 			color: darken($color-gray, 20%);
 
 			&:hover{

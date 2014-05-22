@@ -14,5 +14,6 @@
  */
 
  body{
- 	background-image: url('/assets/mochaGrunge.png');
+ 	/*background-image: url('/assets/mochaGrunge.png');*/
+ 	background-color: #7f8c8d;
  }

@@ -26,8 +26,8 @@
 .secondary-card{
 	@extend .card;
 
-	width: 180px;
-	min-height: 72px;
+	width: 300px;
+	min-height: 120px;
 
 	&:hover{
 		background-color: $color-accent;

@@ -8,19 +8,35 @@ div#standardMode{
 
 	text-align: center;
 
+	div#activeCard{
+		display: table;
+		margin: 0px auto;
+
+		h1{
+			display: table-cell;
+			vertical-align: middle;
+		}
+	}
+
 	ul#answerOptions{
-		margin-top: 80px;
+		margin-top: 20px;
+		margin-left: auto;
+		margin-right: auto;
+		max-width: 1140px;
 
 		text-align: center;
 
 		li{
-			display: inline-block;
+			display: table;
+			float: left;
 
 			&:hover{
 				cursor: pointer;
 			}
 
-			h4{
+			h3{
+				display: table-cell;
+				vertical-align: middle;
 				padding: 10px;
 
 				color: $color-main;

@@ -49,7 +49,7 @@ $(document).ready(function(){
 		$('#answerOptions').empty();
 		var str = "";
 		for(var i=0; i<amt; i++){
-			$("#answerOptions").append("<li class='secondary-card card-in'><h4>TESTER</h4></li>");
+			$("#answerOptions").append("<li class='secondary-card card-in'><h3>TESTER</h3></li>");
 			str += "<i class='fa fa-square-o'></i>";
 		}
 		$(numSel).append(str);
