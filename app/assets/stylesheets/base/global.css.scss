@@ -38,6 +38,10 @@
 	font-family: $title-font;
 }
 
+.table{
+	display: table;
+}
+
 h1{
 	@extend .title-font;
 	font-size: 24pt;

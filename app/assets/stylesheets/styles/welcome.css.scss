@@ -27,19 +27,25 @@ div#standardMode{
 		text-align: center;
 
 		li{
-			display: table;
-			float: left;
+			display: inline-block;
+
+			div.table{
+				height: 100px;
+				width: 100%;
+
+				text-align: center;
+
+				h3{
+					display: table-cell;
+					vertical-align: middle;
+					padding: 10px;
+
+					color: $color-main;
+				}
+			}
 
 			&:hover{
 				cursor: pointer;
-			}
-
-			h3{
-				display: table-cell;
-				vertical-align: middle;
-				padding: 10px;
-
-				color: $color-main;
 			}
 		}
 	}
