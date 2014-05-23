@@ -65,3 +65,87 @@ div#matchMode{
 		}
 	}
 }
+
+div#scoreWrapper{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	padding: 40px 0px;
+
+	div.wrapper{
+
+		h1{
+			position: relative;
+			overflow: hidden;
+
+			color: darken($color-light, 10%);
+
+			@include transition(color, 0.4s);
+
+			span{
+				position: absolute;
+				left: 30px;
+				top: -20px;
+
+				font-size: 20px;
+			}
+
+			&.correct{
+				overflow: visible;
+				color: $color-accent;
+
+				@include transition(color, 0.4s);
+
+				span{
+					top: -60px;
+
+					@include transition(top, 1s);
+				}
+			}
+
+			&.incorrect{
+				color: #c0392b;
+
+				@include transition(color, 0.4s);
+
+				span{
+					top: -60px;
+
+					@include transition(top, 1s);
+				}
+			}
+		}
+	}
+}
+
+div#timerWrapper{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	padding-top: 40px;
+	z-index: 5;
+
+	div.wrapper{
+		text-align: right;
+
+		h3{
+			@extend .card-rounded;
+
+			position: relative;
+			padding: 10px;
+			display: inline-block;
+			border: 1px solid darken(#bdc3c7, 4%);
+
+			color: darken(#bdc3c7, 4%);
+			background-color: lighten(#bdc3c7, 2%);
+			cursor: pointer;
+
+			&:hover{
+				color: $color-main;
+				background-color: $color-accent;
+			}
+		}
+	}
+}

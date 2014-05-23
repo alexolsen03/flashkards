@@ -36,7 +36,7 @@ section#stackInfo{
 
 			width: 300px;
 
-			background-color: lighten($color-gray, 10%);
+			background-color: $color-light;
 
 			@include transition(padding-top, 0.3s);
 
@@ -105,11 +105,8 @@ section#trendingInfo{
 		li{
 			display: block;
 
-			//border-bottom: 1px solid $color-gray;
-			color: darken($color-gray, 20%);
-
 			&:hover{
-				background-color: $color-gray;
+				background-color: lighten($color-gray, 20%);
 				color: $color-main;
 				cursor: pointer;
 			}

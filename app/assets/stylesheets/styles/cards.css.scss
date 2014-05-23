@@ -79,20 +79,6 @@ textarea.card-input{
 	}
 }
 
-@include keyframes(anim_card_append){
-	  0%{ margin:  0px; }
-	 60%{ margin: 40px; }
-	 80%{ margin: 42px; }
-	100%{ margin: 40px; }
-}
-
-@include keyframes(anim_match_cards){
-	  0%{ margin: 5px 0px; }
-	 60%{ margin: 10px 14px; }
-	 80%{ margin: 10px 15px; }
-	100%{ margin: 10px 14px; }
-}
-
 .card-out{
 	margin: 40px;
 }
@@ -104,11 +90,3 @@ textarea.card-input{
 	   -moz-animation-fill-mode: forwards;
 	        animation-fill-mode: forwards;
 }
-
-
-// @include keyframes(anim_menu){
-// 	  0%{ padding: 4px 3px; }
-// 	 60%{ padding: 10px 6px; }
-// 	 80%{ padding: 9px 6px; }
-// 	100%{ padding: 9px 6px; }
-// }

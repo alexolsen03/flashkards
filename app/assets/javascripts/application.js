@@ -15,7 +15,20 @@
 //= require turbolinks
 //= require_tree .
 
+var timerOn = false;
+var myVar;
+
 $(document).ready(function(){
+
+	$(".timer").click(function(){
+		if(!timerOn){
+			myVar = setInterval(function(){myTimer()}, 1000);
+			timerOn = true;
+		}else{
+			clearInterval(myVar);
+			timerOn = false;
+		}
+	});
 
 	$("#modeSubmenu li").click(function(){
 		var val = $(this).find("h4").text();
@@ -111,7 +124,30 @@ $(document).ready(function(){
 	// 	$("#addSaveContainer").removeClass("add-mode").addClass("save-mode");
 	// });
 
+	$("#answerOptions li").click(function(){
+		var score = $("#scoreWrapper").find("h1");
+		var selected = $(this).find("h3").text();
+		console.log('selected is' + selected);
+		if(selected == "Man"){
+			$(score).addClass('correct');
+			setTimeout(function(){
+		         $(score).removeClass("correct");
+		    }, 400);
+		}else{
+			$(score).addClass('incorrect');
+			setTimeout(function(){
+		         $(score).removeClass("incorrect");
+		    }, 400);
+		}
+	});
+
 });
+
+function myTimer(){
+	var d = new Date();
+    var t = d.toLocaleTimeString();
+	$('.timer').text(t);
+}
 
 function addCard(){
 	var frontText = $("#frontText").val();
