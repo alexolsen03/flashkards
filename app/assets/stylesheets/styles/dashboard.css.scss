@@ -1,115 +1,117 @@
-section{
-	@extend .box-sizing;
-	@extend .shadow;
-
-	display: inline-block;
-	margin-top: 20px;
-
-	background-color: $color-light;
+section.dash-sec{
+	@include box-sizing;
+	padding: 10px;
 	vertical-align: top;
 
-	h4.section-title{
-		padding: 10px 20px;
+	background-color: $color-light;
 
-		background-color: $color-gray;
-		color: $color-main;
-		font-weight: bold;
+	.sec-title:first-of-type{
+		margin-top: 0px;
+	}
+
+	.sec-title{
+		margin-top: 20px;
+
 		text-transform: uppercase;
+		color: $color-gray;
+
+		.category{
+			color: $color-compl;
+		}
+	}
+
+	ul.sec-list{
+
+		li{
+
+			div.li-content-wrapper{
+				padding: 8px 0px;
+
+				.li-stack-title{
+					color: $color-accent;
+				}
+
+				.li-stack-info{
+					color: darken($color-gray, 20%);
+				}
+			}
+		}
+	}
+
+	.study-btn{
+		margin-top: 15px;
+		padding: 25px 0px;
+
 		text-align: center;
+		background-color: $color-accent;
+		color: $color-light;
 	}
 
-	li{
-		padding: 10px;
+	&.study-sec{
+		display: inline-block;
+		width: 350px;
+		margin-right: 20px;
 
-		color: $color-main;
-		cursor: pointer;
-		text-transform: lowercase;
-	}
-}
+		// border-right-width: 1px;
+		// border-right-style: solid;
+		// border-right-color: $color-gray;
 
-section#stackInfo{
-	ul{
+		ul{
 
-		li{
-			@extend .shadow;
-			@extend .box-sizing;
-
-			width: 300px;
-
-			background-color: $color-light;
-
-			@include transition(padding-top, 0.3s);
-
-			&:hover{
-				padding-top: 30px;
-
-				color: $color-accent;
-
-				@include transition(padding-top, 0.1s);
-
-				h5{
+			li{
+				input[type='checkbox']{
 					display: inline-block;
+					vertical-align: middle;
+					width: 13px;
+				}
+
+				div.li-content-wrapper{
+					display: inline-block;
+					vertical-align: middle;
+					width: 305px;
+
+					.li-stack-info{
+						margin-top: 4px;
+					}
 				}
 			}
 		}
 	}
 
-	ul#stackList{
-		
+	&.pop-sec{
+		display: inline-block;
+		width: 586px;
+
 		li{
-			@extend .shadow;
-			@extend .box-sizing;
 
-			width: 300px;
-			padding: 10px;
+			div.li-content-wrapper{
 
-			@include transition(padding-bottom, 0.3s);
-
-			h4{
-				display: inline-block;
-			}
-
-			h5.show-hover{
-				display: none;
-				margin-left: 80px;
-			}
-
-			&:hover{
-				padding-bottom: 30px;
-
-				color: $color-accent;
-
-				@include transition(padding-bottom, 0.1s);
-
-				h5{
+				.li-stack-title{
 					display: inline-block;
 				}
-			}
 
-			&.add-stack{
-				color: $color-compl;
-				text-transform: lowercase;
-				text-align: center;
+				.li-stack-info{
+					display: inline-block;
+
+					h5{
+						display: inline-block;
+						padding: 0px 10px;
+
+						text-align: center;
+						color: $color-gray;
+					}
+				}
 			}
 		}
 	}
-}
 
-section#trendingInfo{
-	margin-left: 20px;
-	width: 616px;
+	&.trending-sec{
+		margin-top: 20px;
+		width: 468px;
+		display: inline-block;
 
-	ul{
-		display: block;
-
-		li{
-			display: block;
-
-			&:hover{
-				background-color: lighten($color-gray, 20%);
-				color: $color-main;
-				cursor: pointer;
-			}
+		&:last-of-type{
+			margin-left: 20px;
 		}
 	}
 }

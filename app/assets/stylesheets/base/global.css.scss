@@ -6,10 +6,6 @@
 	//@include shadow(3px, 2px, 5px, #666);
 }
 
-.card-rounded{
-	@include rounded(8px);
-}
-
 .go-right{
 	float: right;
 }
@@ -81,4 +77,14 @@ h5{
 			padding: 0px 15px;
 		}
 	}
+}
+
+/******* Project Specific *********/
+
+.card-rounded{
+	@include rounded(8px);
+}
+
+.light-bg{
+	background-color: $color-light;
 }
