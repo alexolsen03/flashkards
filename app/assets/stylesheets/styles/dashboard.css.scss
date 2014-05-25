@@ -1,6 +1,8 @@
 section.dash-sec{
 	@include box-sizing;
+
 	padding: 10px;
+	margin-top: 15px;
 	vertical-align: top;
 
 	background-color: $color-light;
@@ -60,9 +62,9 @@ section.dash-sec{
 	}
 
 	&.study-sec{
-		display: inline-block;
-		width: 350px;
-		margin-right: 20px;
+		//display: inline-block;
+		//width: 350px;
+		//margin-right: 20px;
 
 		// border-right-width: 1px;
 		// border-right-style: solid;
@@ -102,7 +104,7 @@ section.dash-sec{
 				div.li-content-wrapper{
 					display: inline-block;
 					vertical-align: middle;
-					width: 305px;
+					width: 338px;
 
 					.li-stack-info{
 						margin-top: 4px;
@@ -113,8 +115,8 @@ section.dash-sec{
 	}
 
 	&.pop-sec{
-		display: inline-block;
-		width: 586px;
+		//display: inline-block;
+		//width: 556px;
 
 		li{
 			cursor: pointer;
@@ -151,13 +153,36 @@ section.dash-sec{
 		}
 	}
 
-	&.trending-sec{
-		margin-top: 20px;
-		width: 468px;
-		display: inline-block;
+	&.user-sec{
 
-		&:last-of-type{
-			margin-left: 20px;
+		ul.sec-list{
+
+			li{
+				text-transform: none;
+
+				div.li-content-wrapper{
+
+					.li-stack-title{
+						color: $color-main;
+					}
+				}
+			}
+		}
+	}
+
+	&.trending-cat-sec{
+
+		ul.sec-list{
+
+			li{
+
+				div.li-content-wrapper{
+
+					.li-stack-title{
+						color: $color-compl;
+					}
+				}
+			}
 		}
 	}
 }
