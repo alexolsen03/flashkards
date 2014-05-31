@@ -52,6 +52,10 @@ $(document).ready(function(){
 			$("#matchingSelList").css("display", "none");
 			$("#matchingOptionsSubmenu").css("display", "none");
 		}
+		if(val == "Single"){
+			$("#standardMode").css("display", "none");
+			$("#singleMode").css("display", "block");
+		}
 		$("#currentMode").text(val);
 	});
 

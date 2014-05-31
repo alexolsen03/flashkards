@@ -31,6 +31,8 @@ header{
 			display: inline-block;
 			position: relative;
 			z-index: 99;
+			height: 32px;
+			line-height: 32px;
 			
 			color: $color-gray;
 			text-transform: lowercase;
@@ -75,7 +77,7 @@ header{
 			}
 
 			&.mode-option{
-				padding: 8px 24px;
+				padding: 0px 24px;
 			}
 		}
 	}
@@ -120,7 +122,7 @@ header{
 		padding-top: 3px; //bc floated.. need to align with other uls
 
 		li{
-			padding: 8px 10px;
+			padding: 0px 10px;
 		}
 
 		&:after{

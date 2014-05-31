@@ -1,8 +1,7 @@
 section.dash-sec{
 	@include box-sizing;
 
-	padding: 10px;
-	margin-top: 15px;
+	margin-top: 16px;
 	vertical-align: top;
 
 	background-color: $color-light;
@@ -12,10 +11,16 @@ section.dash-sec{
 	}
 
 	.sec-title{
-		margin-top: 20px;
+		margin-top: 16px;
+		padding: 8px;
+		font-size: 12pt;
 
 		text-transform: uppercase;
-		color: $color-gray;
+		font-weight: 600;
+		background-color: lighten($color-gray, 25%);
+		//color: darken($color-gray, 20%);
+		//background-color: $color-compl;
+		color: $color-light;
 
 		.category{
 			color: $color-compl;
@@ -23,72 +28,85 @@ section.dash-sec{
 	}
 
 	ul.sec-list{
+		padding: 8px;
 
 		li{
 			text-transform: lowercase;
 
 			div.li-content-wrapper{
-				padding: 8px 0px;
+				padding-bottom: 8px;
 
 				.li-stack-title{
 					color: $color-accent;
+					font-size: 12pt;
 				}
 
 				.li-stack-info{
-
 					color: lighten($color-gray, 15%);
-					//color: darken($color-gray, 20%);
 				}
-
 			}
 
+			&:last-of-type{
+				div.li-content-wrapper{
+					padding-bottom: 0px;
+				}
+			}
 		}
 	}
 
-	.study-btn{
-		margin-top: 15px;
-		padding: 25px 0px;
-		border: 1px solid darken($color-accent, 10%);
+	.btn-wrapper{
+		padding: 8px;
 
-		text-align: center;
-		background-color: $color-accent;
-		color: $color-light;
+		.study-btn{
+			//margin: 8px;
+			padding: 25px 0px;
+			border: 1px solid darken($color-accent, 10%);
 
-		&:hover{
-			background-color: $color-compl;
-			border-color: $color-compl;
-			cursor: pointer;
+			text-align: center;
+			background-color: $color-accent;
+			color: $color-light;
+
+			&:hover{
+				background-color: $color-compl;
+				border-color: $color-compl;
+				cursor: pointer;
+			}
 		}
 	}
 
 	&.study-sec{
-		//display: inline-block;
-		//width: 350px;
-		//margin-right: 20px;
-
-		// border-right-width: 1px;
-		// border-right-style: solid;
-		// border-right-color: $color-gray;
 
 		.sec-title{
-			display: inline-block;
-
-			&:first-of-type{
-				width: 49%;
-			}
+			//background-color: lighten($color-compl, 15%);
+			background-color: lighten($color-main, 25%);
 		}
 
-		.sec-title-actions{
-			display: inline-block;
-			width: 49%;
-			font-size: 18px;
+		div.my-stack-upper{
+			//background-color: lighten($color-compl, 15%);
+			background-color: lighten($color-main, 25%);
+			color: $color-light;
 
-			text-align: right;
-			color: $color-gray;
+			.sec-title{
+				display: inline-block;
+				background-color: lighten($color-main, 25%);
+				//background-color: lighten($color-compl, 15%);
 
-			i:hover{
-				color: $color-compl;
-				cursor: pointer;
+				&:first-of-type{
+					width: 49%;
+				}
+			}
+
+			.sec-title-actions{
+				display: inline-block;
+				width: 45%;
+				font-size: 18px;
+
+				text-align: right;
+
+				i:hover{
+					color: $color-accent;
+					cursor: pointer;
+				}
 			}
 		}
 
@@ -104,7 +122,7 @@ section.dash-sec{
 				div.li-content-wrapper{
 					display: inline-block;
 					vertical-align: middle;
-					width: 338px;
+					width: 348px;
 
 					.li-stack-info{
 						margin-top: 4px;
@@ -117,6 +135,11 @@ section.dash-sec{
 	&.pop-sec{
 		//display: inline-block;
 		//width: 556px;
+
+		.sec-title{
+			//background-color: lighten($color-compl, 5%);
+			color: $color-gray;
+		}
 
 		li{
 			cursor: pointer;
